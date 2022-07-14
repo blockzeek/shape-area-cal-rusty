@@ -1,4 +1,4 @@
-trait Area {
+trait Shape {
     fn area(self) -> f32;
 }
 
@@ -6,7 +6,7 @@ struct Circle {
     radius: f32,
 }
 
-impl Area for Circle {
+impl Shape for Circle {
     fn area(self) -> f32 {
         std::f32::consts::PI * self.radius * self.radius
     }
@@ -17,7 +17,7 @@ struct Triangle {
     height: f32,
 }
 
-impl Area for Triangle {
+impl Shape for Triangle {
     fn area(self) -> f32 {
         self.base * self.height / 2f32
     }
@@ -27,7 +27,7 @@ struct Square {
     side: f32,
 }
 
-impl Area for Square {
+impl Shape for Square {
     fn area(self) -> f32 {
         self.side * self.side
     }
